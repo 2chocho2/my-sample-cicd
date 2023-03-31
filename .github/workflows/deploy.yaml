@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: ap-northeast-2
-  S3_BUCKET_NAME: myanjini-cicd-bucket
+  S3_BUCKET_NAME: chocho-cicd-bucket
   CODE_DEPLOY_APPLICATION_NAME: my-codedeploy-app
   CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: my-codedeploy-deployment-group
 
@@ -29,7 +29,7 @@ jobs:
         java-version: '11'  
 
     - name: Build with Maven 
-      run: mvn -B package --file ./Sample/pom.xml
+      run: mvn -B package --file ./sample-2/pom.xml
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
